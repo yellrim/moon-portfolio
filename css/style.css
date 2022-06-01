@@ -1,10 +1,11 @@
-@charset 'utf-8';
+@charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 :root{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
     font-size: 15px;
+    color: #222;
 }
 html{
     scroll-behavior: smooth;
@@ -13,8 +14,13 @@ body{
     min-height: 100vh;
     overflow-x:hidden;
 }
+/* 공통 */
 section{
     height: 100vh;
+}
+.sec .container{
+    position: relative;
+    margin: 0 auto;
 }
 .sec .container h2{
     margin: 0 0 50px;
@@ -26,6 +32,16 @@ section{
     content: '';
     position: absolute;
 }
+.sec::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+}
+
+/* header */
 .header{
     position: absolute;
     top: 0;
@@ -71,12 +87,8 @@ section{
     background-color: #fff;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
     border-radius: 40px;
     z-index: 100000;
-    width: 25px;
 }
 .fixed-nav .move{
     display: flex;
@@ -99,13 +111,7 @@ section{
     overflow: hidden;
 }
 .main::before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
     background: linear-gradient(to top, #2b1055, transparent);
-    z-index: 100;
 }
 .main img{
     position: absolute;
@@ -155,10 +161,8 @@ section{
     background: url(../img/stars.png)#2b1055;
 }
 .about .container{
-    position: relative;
     width: 1100px;
     padding: 50px;
-    margin: 0 auto;
 }
 .about .container h2{
     color: #7597de;
@@ -202,7 +206,8 @@ section{
     padding: 20px;
     font-size: 16px;
 }
-.about .profile ul li >span{
+.about .profile ul li >span,
+.about .education h3{
     color: #7597de;
     font-weight: 700;
     font-size: 19px;
@@ -211,36 +216,25 @@ section{
     margin: -20px 500px;
     width: 700px;
 }
+.about .education h3{
+    margin: 0 0 20px;
+}
 .about .education p{
     text-align: left;
     line-height: 1.8em;
     font-size: 15px;
-}
-.about .education h3{
-    color: #7597de;
-    margin: 0 0 20px;
-    font-weight: 700;
-    font-size: 20px;
 }
 /* SKILLS */
 .skills{
     background: linear-gradient(#2b1055,#7597de);
 }
 .skills::before{
-    content: '';
-    position: absolute;
     left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
     background: linear-gradient(to top, #fff, transparent);
-    z-index: 1000;
 }
 .skills .container{
-    position: relative;
     width: 600px;
     padding: 50px;
-    margin: 0 auto;
 }
 .skills .container h2{
     color: #fff;
@@ -293,11 +287,7 @@ section{
 
 /* portfolio */
 .portfolio{
-    position: relative;
     background: #fff;
-}
-.portfolio .container{
-    margin: 0 auto;
 }
 .portfolio .container h2{
     position: relative;
