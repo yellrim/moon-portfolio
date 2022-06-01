@@ -39,6 +39,7 @@ let portfolio8 = document.getElementById('portfolio8');
 let history9 = document.getElementById('history9');
 let portfolio9 = document.getElementById('portfolio9');
 
+// open
 function historyOpen1(){
     history1.style.display = 'block';
     portfolio1.style.marginLeft = '170px';
@@ -76,7 +77,7 @@ function historyOpen9(){
     portfolio9.style.marginLeft = '170px';
 }
 
-
+// close
 function historyClose1(){
     history1.style.display = 'none';
     portfolio1.style.marginLeft = '-170px';
