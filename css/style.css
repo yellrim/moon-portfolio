@@ -1,0 +1,451 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+:root{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+section{
+    height: 100vh;
+}
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.header .logo{
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 50px 0 0 100px;
+}
+.header ul{
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 100px 0 0;
+}
+.header ul li{
+    margin-left: 20px;
+}
+.header ul li a{
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+.header ul li a:hover,
+.header ul li a.active{
+    background: #fff;
+    color: #2b1055;
+}
+/* fixed-nav */
+.fixed-nav{
+    position: fixed;
+    top: 25%;
+    left: 3%;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 40px;
+    z-index: 100000;
+    width: 25px;
+}
+.fixed-nav .move{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.fixed-nav .move img{
+    width: 25px;
+    margin: 50px 0;
+    cursor: pointer;
+}
+/* main */
+.main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.main::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #2b1055, transparent);
+    z-index: 100;
+}
+.main img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.main img#moon{
+    transform: translateX(-80px);
+    mix-blend-mode: screen;
+}
+#text{
+    position: absolute;
+    right: -550px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 4.5vw;
+    font-weight: 700;
+    z-index: 9;
+}
+.main img#front{
+    transform: translateX(-80px);
+    z-index: 10;
+}
+.main img#behind
+{
+    transform: translateX(-80px);
+}
+#btn{
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    transform: translate(-70px,150px);
+}
+.sec{
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+.sec h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.sec p{
+    font-size: 1.2em;
+    color: #fff;
+}
+/* ABOUT ME */
+.about{
+    background: url(../img/stars.png)#2b1055;
+}
+.about .container{
+    position: relative;
+    width: 1100px;
+    padding: 50px;
+    margin: 0 auto;
+}
+.sec .container .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.about .container h2{
+    margin: 0 0 50px;
+    padding: 0;
+    color: #7597de;
+    text-align: center;
+    font-size: 52px;
+    font-weight: 700;
+}
+.about .container p{
+    margin: 0 0 50px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+.about .container h2::after{
+    content: '';
+    position: absolute;
+    top: 17%;
+    right: 47%;
+    width: 5%;
+    border-bottom: 2px solid #fff;
+}
+.about .profile{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.about .profile img{
+    width: 270px;
+    height: 290px;
+    border: 11px solid #eee;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.about .profile ul{
+    color: #fff;
+    margin: 50px;
+}
+.about .profile ul li{
+    padding: 20px;
+    font-size: 16px;
+}
+.about .profile ul li >span{
+    color: #7597de;
+    font-weight: 700;
+    font-size: 19px;
+}
+.about .education{
+    margin: -20px 500px;
+    width: 700px;
+}
+.about .education p{
+    text-align: left;
+    line-height: 1.8em;
+    font-size: 15px;
+}
+.about .education h3{
+    color: #7597de;
+    margin: 0 0 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+/* SKILLS */
+.skills{
+    background: linear-gradient(#2b1055,#7597de);
+}
+.skills::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #fff, transparent);
+    z-index: 1000;
+}
+.skills .container{
+    position: relative;
+    width: 600px;
+    padding: 50px;
+    margin: 0 auto;
+}
+.skills .container h2{
+    margin: 0 0 50px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 52px;
+}
+.skills .container h2::after{
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: 46%;
+    width: 7%;
+    border-bottom: 2px solid #fff;
+}
+.skills .container .skill{
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.skills .container .skill h3{
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 18px;
+    color: #fff;
+}
+.progress{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    text-align: center;
+    line-height: 22px;
+    color: #fff;
+    overflow: hidden;
+}
+.progress .percent{
+    text-align: right;
+    color: #fff;
+    padding-right: 10px;
+    border-right: 2px solid #fff;
+    animation: skill .5s linear infinite;
+    background: linear-gradient(45deg, rgba(255,255,255,.25) 25%,
+    transparent 25%, transparent 50%, rgba(255,255,255,.25) 50%, 
+    rgba(255,255,255,.25) 75%, transparent 75%, transparent);
+    background-size: 30px 30px;
+}
+@keyframes skill{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 30px 0;
+    }
+}
+
+/* portfolio */
+.portfolio{
+    position: relative;
+    background: #fff;
+}
+.portfolio .container{
+    margin: 0 auto;
+}
+.portfolio .container h2{
+    position: relative;
+    margin: 50px 0 50px;
+    padding: 0;
+    color: #7597de;
+    text-align: center;
+    font-size: 52px;
+}
+.portfolio .container h2::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 48%;
+    width: 5%;
+    border-bottom: 2px solid #7597de;
+}
+.portfolio-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:150px 0 200px -170px;
+}
+.portfolio .container .portfolio-box .img-box{
+    position: relative;
+    float: left;
+}
+.portfolio .container .portfolio-box .img-box img:nth-child(1){
+    width: 500px;
+    height: auto;
+}
+.portfolio .container .portfolio-box .portfolio-btn{
+    float: left;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.history-box{
+    display: none;
+    position: relative;
+    width: 50%;
+    margin: 150px;
+    letter-spacing: 2px;
+    line-height: 2em;
+    cursor: pointer;
+    z-index: 10;
+}
+.history-box h3{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20PX;
+}
+.history-box p{
+    color: #222;
+}
+.history-box:hover h3::after{
+    content: '';
+    width: 25%;
+    height: 17px;
+    background-color: #7597de;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    z-index: -1;
+    animation: line 0.3s linear;
+}
+
+@keyframes line{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 25%;
+    }
+}
+.btn{
+    position: relative;
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #3e3f46;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border: 1px solid #fff;
+    transition: 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #7597de;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,#fff,transparent);
+    transition: 0.8s;
+}
+.btn:hover::before{
+    left: 100%;
+}
+.btn-close div{
+    position: absolute;
+    top: 0;
+    right: 2%;
+    color: #7597de
+    
+    ;
+    font-family: none;
+    font-size: 55px;
+    cursor: pointer;
+}
+.btn-close:hover div{
+    transform: translate(3px, 11px) rotate(140deg);
+    transition: 0.2s;
+}
+
+.btn-close:hover div::after{
+    content: '-';
+    position: absolute;
+    top: 0;
+    right: 2%;
+    transform: translate(6px, 6px) rotate(80deg);
+    transition: 0.2s;
+    color: #1f5378;
+    font-size: 55px;
+    cursor: pointer;
+}
